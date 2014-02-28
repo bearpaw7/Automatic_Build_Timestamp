@@ -11,3 +11,5 @@
 *.lai
 *.la
 *.a
+/NetBeans_Welcome/build/
+/NetBeans_Welcome/dist/
