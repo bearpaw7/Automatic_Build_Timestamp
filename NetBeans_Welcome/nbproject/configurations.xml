@@ -31,6 +31,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandLine>-D __BUILD_TIME=\"$(BUILD_TIME)\"</commandLine>
+        </ccTool>
       </compileType>
       <item path="welcome.cc" ex="false" tool="1" flavor2="0">
       </item>

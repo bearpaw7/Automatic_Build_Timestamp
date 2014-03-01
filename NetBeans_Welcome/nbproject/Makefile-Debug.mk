@@ -42,8 +42,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-D __BUILD_TIME=\"$(BUILD_TIME)\"
+CXXFLAGS=-D __BUILD_TIME=\"$(BUILD_TIME)\"
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_welcome: ${OBJECTFILES}
 ${OBJECTDIR}/welcome.o: welcome.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/welcome.o welcome.cc
+	$(COMPILE.cc) -g -D __BUILD_TIME=\"$(BUILD_TIME)\" -MMD -MP -MF $@.d -o ${OBJECTDIR}/welcome.o welcome.cc
 
 # Subprojects
 .build-subprojects:
