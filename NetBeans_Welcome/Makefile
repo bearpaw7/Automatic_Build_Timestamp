@@ -77,15 +77,18 @@ MKDIR=mkdir
 CP=cp
 CCADMIN=CCadmin
 RANLIB=ranlib
+BUILD_TIME := $(shell date +%Y%h%d_%H:%M:%S)
 
 # build
 build: .build-post
 
 .build-pre:
 # Add your pre 'build' code here...
+	@echo Build $(BUILD_TIME) started.
 
 .build-post: .build-impl
 # Add your post 'build' code here...
+	@echo Build $(BUILD_TIME) finished.
 
 
 # clean
