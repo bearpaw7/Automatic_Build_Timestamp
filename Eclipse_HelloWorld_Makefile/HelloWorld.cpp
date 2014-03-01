@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 int main(void) {
+	printf("Built at %s \n", __BUILD_TIME);
 	puts("Hello World!!!");
 	return EXIT_SUCCESS;
 }
